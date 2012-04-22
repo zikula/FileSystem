@@ -24,7 +24,7 @@
     },
     "autoload": {
         "psr-0": {
-            "Zikula\\Component\\FileSystem": "",
+            "Zikula\\Component\\FileSystem": ""
         }
     },
     "target-dir": "Zikula/Component/FileSystem"
