@@ -19,6 +19,10 @@ class FtpTest extends \PHPUnit_Framework_TestCase
      */
     protected function setUp()
     {
+        if (!extension_loaded('ftp')) {
+             $this->markTestIncomplete('FTP extension is not loaded');
+        }
+        
         parent::setUp();
         $config = new FtpConfiguration();
         $this->ftp = new Ftp($config);
