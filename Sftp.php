@@ -172,7 +172,10 @@ class Sftp extends AbstractDriver
      */
     public function getContents($remote)
     {
-        return stream_get_contents($this->fget($remote));
+        $remote_file = $this->fget($remote);
+        return ($remote_file)
+             ? stream_get_contents($this->fget($remote))
+             : false;
     }
 
     /**
